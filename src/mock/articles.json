@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "id": 25,
+      "documentId": "s73eis2bkeq8nnxulqbfbsso",
+      "contentMd": "# Vuejs vs React who win ?\n\n## Vuejs\n\n## React",
+      "createdAt": "2024-10-30T13:35:49.513Z",
+      "updatedAt": "2024-11-17T14:21:31.923Z",
+      "publishedAt": "2024-11-17T14:21:31.945Z",
+      "slug": "article-vuejs-vs-react",
+      "size": "short"
+    },
+    {
+      "id": 26,
+      "documentId": "neo59zxy7i852309whrx2v0h",
+      "contentMd": "test new",
+      "createdAt": "2024-11-08T17:09:03.911Z",
+      "updatedAt": "2024-11-17T14:21:47.145Z",
+      "publishedAt": "2024-11-17T14:21:47.158Z",
+      "slug": "test",
+      "size": "short"
+    },
+    {
+      "id": 27,
+      "documentId": "enz1f3chhsck30k4zmj32nj7",
+      "contentMd": "# 1. The Power of Pure Functions in Software Engineering\n\nPure functions are a cornerstone of functional programming, providing predictable outputs and no side effects. These functions:\n\n- Return the same output for the same input\n- Have no external dependencies\n- Simplify testing and debugging\n\nExample: A function calculating the square of a number:\n\n```javascript\nfunction square(num) {\n  return num * num;\n}\n```\n\nPure functions improve reusability and maintainability, helping developers build more robust applications.",
+      "createdAt": "2024-11-09T13:24:45.502Z",
+      "updatedAt": "2024-11-17T14:22:11.231Z",
+      "publishedAt": "2024-11-17T14:22:11.246Z",
+      "slug": "the-power-of-pure-functions-in-programming",
+      "size": "tallest"
+    },
+    {
+      "id": 29,
+      "documentId": "j6nh2mp94m0pikfdepgknyif",
+      "contentMd": "# 3. Vue + Ionic: A Perfect Combo for Mobile Apps\n\nCombining Vue with Ionic brings the best of both worlds for mobile development:\n\n- Vue: Known for its simplicity and reactivity\n- Ionic: Provides a rich library of mobile-friendly components\n\nUsing Capacitor allows for smooth deployment on iOS, Android, and web, making cross-platform development efficient and fun.\n\nExample Use Case: A photo-sharing app where Ionic handles the UI and Vue manages the app logic.",
+      "createdAt": "2024-11-09T13:25:19.958Z",
+      "updatedAt": "2024-11-17T14:23:22.823Z",
+      "publishedAt": "2024-11-17T14:23:22.839Z",
+      "slug": "vue-ionic-for-mobile-apps",
+      "size": "tallest"
+    },
+    {
+      "id": 30,
+      "documentId": "y25ishyfqqd2g5s7ct9q8c1c",
+      "contentMd": "# 5. Boosting Performance with SSG, ISR, and SSR in Nuxt\n\nNuxt’s rendering strategies – SSG (Static Site Generation), ISR (Incremental Static Regeneration), and SSR (Server-Side Rendering) – offer tailored solutions for performance.\n\n- SSG: Perfect for fully static pages\n- ISR: Regenerates content at specific intervals\n- SSR: Renders content server-side for up-to-date data on each request\n\nUse Case: SSG for a blog’s home page, ISR for articles, and SSR for user profiles.",
+      "createdAt": "2024-11-09T13:25:53.627Z",
+      "updatedAt": "2024-11-17T14:24:16.544Z",
+      "publishedAt": "2024-11-17T14:24:16.556Z",
+      "slug": "boosting-performance-with-ssg-isr-ssr-in-nuxt",
+      "size": "tallest"
+    },
+    {
+      "id": 31,
+      "documentId": "zddp5cfsijks6q7txq28e00x",
+      "contentMd": "# 6. Leveraging Pinia for Vue State Management\n\nPinia is the official state management library for Vue 3, offering:\n\n- Type-safe store setup with TypeScript\n- Automatic persistence options\n- Intuitive API that simplifies store creation and state manipulation\n\nExample:\n\n```javascript\nconst useStore = defineStore('main', {\n  state: () => ({ count: 0 }),\n  actions: {\n    increment() { this.count++ }\n  }\n});\n```\n\nWith Pinia, managing state in Vue becomes straightforward and scalable.",
+      "createdAt": "2024-11-09T13:26:11.527Z",
+      "updatedAt": "2024-11-17T14:24:56.683Z",
+      "publishedAt": "2024-11-17T14:24:56.701Z",
+      "slug": "pinia-for-vue-state-management",
+      "size": "tallest"
+    },
+    {
+      "id": 32,
+      "documentId": "wx7tmixcmilnvm0d29d4yp1m",
+      "contentMd": "# 7. Storybook for Documenting Component Libraries\n\nUsing Storybook lets you showcase and test components in isolation.\n\n- Easily preview components with different props\n- Improve collaboration by sharing stories with designers and stakeholders\n- Automate testing with visual regression tools\n\nFor Vue and React projects, Storybook is a great tool to document your UI components effectively.",
+      "createdAt": "2024-11-09T13:26:24.519Z",
+      "updatedAt": "2024-11-17T14:25:35.142Z",
+      "publishedAt": "2024-11-17T14:25:35.154Z",
+      "slug": "storybook-for-documenting-component-libraries",
+      "size": "tallest"
+    },
+    {
+      "id": 33,
+      "documentId": "vfi70u45wolo0wunun5aup1w",
+      "contentMd": "# 4. Composition API in Vue 3: A Game-Changer\n\nThe Composition API in Vue 3 provides a new, flexible way to structure components.\n\n- Organizes code by feature, not by option, improving modularity\n- Enables better code reuse and maintains readability in complex apps\n\nExample:\n\n```javascript\nimport { ref, computed } from 'vue';\nconst count = ref(0);\nconst doubleCount = computed(() => count.value * 2);\n```\n\nWith Composition API, Vue developers can handle complex state management with ease.",
+      "createdAt": "2024-11-09T13:25:40.272Z",
+      "updatedAt": "2024-11-17T14:26:31.252Z",
+      "publishedAt": "2024-11-17T14:26:31.272Z",
+      "slug": "composition-api-in-vue-3",
+      "size": "tallest"
+    },
+    {
+      "id": 34,
+      "documentId": "eqjm3sbv0os7hnle98yblzmb",
+      "contentMd": "# 8. Atomic Design: Building UI in Layers\n\nThe Atomic Design methodology breaks down UI into distinct parts:\n\n- Atoms: Basic building blocks (buttons, inputs)\n- Molecules: Small component groups (forms)\n- Organisms: Complex components with structure (navigation bars)\n\nThis design system makes UIs more scalable and reusable.",
+      "createdAt": "2024-11-09T13:26:40.084Z",
+      "updatedAt": "2024-11-17T14:27:24.513Z",
+      "publishedAt": "2024-11-17T14:27:24.528Z",
+      "slug": "atomic-design-building-components",
+      "size": "tallest"
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 12
+    }
+  }
+}

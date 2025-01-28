@@ -1,0 +1,53 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docker-dev": "docker-compose up",
+    "docker-install": "docker-compose exec nuxt-app npx yarn install",
+    "docker-postinstall": "docker-compose exec nuxt-app npx nuxt prepare",
+    "docker-build": "docker-compose exec nuxt-app npx nuxt build",
+    "docker-generate": "docker-compose exec nuxt-app npx nuxt generate",
+    "docker-preview": "docker-compose exec nuxt-app npx nuxt preview",
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "nuxi start",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "@nuxt/image": "^1.8.1",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@pinia/nuxt": "^0.5.5",
+    "@types/lodash": "^4.17.13",
+    "@vuepic/vue-datepicker": "^9.0.3",
+    "deepmerge": "^4.3.1",
+    "lodash": "^4.17.21",
+    "markdown-it": "^14.1.0",
+    "muuri": "^0.9.5",
+    "nuxt": "^3.13.2",
+    "pinia": "^2.2.4",
+    "pinia-plugin-persistedstate": "^4.1.1",
+    "remove": "^0.1.5",
+    "sass": "^1.80.4",
+    "sass-loader": "^16.0.2",
+    "sharp": "^0.33.5",
+    "string-width": "^7.2.0",
+    "uuid": "^11.0.2",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vue": "latest",
+    "vue-router": "latest",
+    "vuedraggable": "^4.1.0",
+    "vuetify": "^3.7.3",
+    "wide-align": "^1.1.5"
+  },
+  "resolutions": {
+    "string-width": "4.2.3"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "devDependencies": {
+    "@sidebase/nuxt-auth": "^0.9.4"
+  }
+}

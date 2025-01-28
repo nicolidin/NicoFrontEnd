@@ -1,0 +1,35 @@
+{
+  "welcome": "Welcome to our website!",
+  "title1": "Développeur Web/Mobile/Logiciel",
+  "title2": "⚡ Vue.js Expert",
+  "title3":  "👨‍🏫 Teacher. Available.",
+  "language": "Language",
+  "description1": "👨‍💻 Full-stack Developer with a strong expertise in front-end, I am passionate about and highly skilled in the Vue.js framework and its ecosystem.",
+  "description2": "🛠 Software Architect with a preference for working with startups, I design technically rich projects from scratch.",
+  "description3": "I bring my versatility to the table, ready to bring any of your app, software, or web ideas to life. If you lead a startup, I can single-handedly execute your entire digital projects.",
+  "description4": "💡 My philosophy: turning complexity into simplicity. I position myself as a proactive problem solver, addressing your technical and functional challenges. Driven by a quest for perfection, my work is and will always be of impeccable quality.",
+  "description5": "💬 Feel free to reach out to discuss your projects or ask any questions!",
+  "SEO": {
+     "home": {
+      "title": "Nicolas Lidin - Web, Mobile, and Software Developer | Vue.js Expert",
+      "description": "Nicolas Lidin, full-stack developer specialized in front-end, Vue.js expert, educator, and software architect. Transforming your ideas into high-quality digital solutions with precision and efficiency.",
+      "ogTitle": "Nicolas Lidin - Web and Mobile Developer, Vue.js Expert",
+      "ogDescription": "Meet Nicolas Lidin, full-stack developer and software architect, passionate about crafting web, mobile, and software solutions. Available for collaboration and teaching.",
+      "ogImageAlt": "Photo of Nicolas Lidin, developer and software architect specialized in Vue.js."
+    },
+    "article": {
+      "title": "Article: {text}",
+      "description": "{text}",
+      "ogTitle": "Article written by Nicolas Lidin; software developer expert in Vue.js, TypeScript, and front-end architecture: {text}",
+      "ogDescription": "The article content is: {text}",
+      "ogImageAlt": "A photo of me wearing a shirt, with short to medium-length hair, light skin, brown eyes, and slight under-eye circles."
+    },
+    "articles": {
+      "title": "All Articles {text}",
+      "description": "Explore all articles written by Nicolas Lidin, expert in software development, Vue.js, TypeScript, and front-end architecture. {text}",
+      "ogTitle": "List of Articles by Nicolas Lidin - Expert in Vue.js, TypeScript, and Front-End Architecture {text}",
+      "ogDescription": "Browse all articles on various topics in software development, front-end, and new technologies. {text}",
+      "ogImageAlt": "Image of a collection of articles on software development and front-end architecture. {text}"
+    }
+  }
+}
