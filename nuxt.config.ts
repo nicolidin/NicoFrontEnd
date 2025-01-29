@@ -3,7 +3,6 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
   srcDir: 'src/', // Tell Nuxt to use the `src` directory
-  target: 'static',
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   ssr: true,
@@ -30,6 +29,11 @@ export default defineNuxtConfig({
     },
     prerender: {
       cache: true, // Active le cache pour les routes pré-rendues
+      routes: ['/', '/en', '/articles'], // Définis les routes pré-rendues
+      crawlLinks: true, // Explore les liens automatiquement
+    },
+    routeRules: {
+      '/strapi/api/**': { middleware: 'strapiProxy' },
     },
   },
 
@@ -68,11 +72,6 @@ export default defineNuxtConfig({
     strapiBaseUrl: process.env.STRAPI_BASE_URL,
   },
 
-  nitro: {
-    routeRules: {
-      '/strapi/api/**': { middleware: 'strapiProxy' },
-    },
-  },
   // Based on docs found here - https://vuetifyjs.com/en/getting-started/installation/#using-nuxt-3
   vite: {
     css: {
