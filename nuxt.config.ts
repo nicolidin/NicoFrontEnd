@@ -21,6 +21,9 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "aws-amplify",
+    awsAmplify: {
+      catchAllStaticFallback: true, // Ensures SSG routes are properly handled
+    },
     debug: true, // Affiche des logs détaillés dans la console
     storage: {
       'cache': {
@@ -42,6 +45,7 @@ export default defineNuxtConfig({
     '/en': { prerender: true},
     '/article/**': { ssr: true }, // Spécifie que les pages sous `/article/` utilisent SSR
     '/articles': { prerender: true },
+    '/<*>': { static: true }, // Ensures static files are served correctly
   },
 
   router: {
