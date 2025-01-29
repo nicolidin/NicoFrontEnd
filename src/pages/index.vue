@@ -1,7 +1,6 @@
 <template>
   <div class="header">
   </div>
-  <p>test</p>
   <p>{{t('description1')}}</p>
   <br/>
   <p>{{t('description2')}}</p>

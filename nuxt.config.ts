@@ -21,6 +21,7 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
+    preset: "aws-amplify",
     debug: true, // Affiche des logs détaillés dans la console
     storage: {
       'cache': {
