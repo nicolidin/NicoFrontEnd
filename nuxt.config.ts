@@ -31,7 +31,6 @@ export default defineNuxtConfig({
       }
     },
     prerender: {
-      cache: true, // Active le cache pour les routes pré-rendues
       routes: ['/', '/en', '/articles'], // Définis les routes pré-rendues
       crawlLinks: true, // Explore les liens automatiquement
     },
@@ -45,7 +44,6 @@ export default defineNuxtConfig({
     '/en': { prerender: true},
     '/article/**': { ssr: true }, // Spécifie que les pages sous `/article/` utilisent SSR
     '/articles': { prerender: true },
-    '/<*>': { static: true }, // Ensures static files are served correctly
   },
 
   router: {
