@@ -1,6 +1,6 @@
 <template>
   <nuxt-img alt="nicolas_pp" :src="props.imgPath"
-            class="circle" height="100" width="100"
+            class="circle" height="100" width="100" :modifier="{ width: 100, height: 100 }"
   ></nuxt-img>
 </template>
 
