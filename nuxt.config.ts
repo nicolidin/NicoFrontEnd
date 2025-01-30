@@ -53,11 +53,6 @@ export default defineNuxtConfig({
 
   image: {
     domains: [process.env.APP_BASE_URL],
-    provider: "aws-amplify",
-    screens: {
-      avatar: 100, // Déclare une taille d’image "avatar" de 100px
-      icon: 50 // Ajoute une autre taille pour les icônes
-    }
   },
 
   css: [
