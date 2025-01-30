@@ -21,10 +21,10 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    preset: process.env.PRESET ?? "aws-amplify",
-    // awsAmplify: {
-    //   catchAllStaticFallback: true, // Ensures SSG routes are properly handled
-    // },
+    preset: "aws-amplify",
+    awsAmplify: {
+      catchAllStaticFallback: true, // Ensures SSG routes are properly handled
+    },
     debug: true, // Affiche des logs détaillés dans la console
     storage: {
       'cache': {
@@ -52,12 +52,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    domains: [process.env.APP_BASE_URL],
-    provider: process.env.PRESET === "node-server" ? "ipx" : "aws-amplify",
-    modifiers: {
-      width: (defaultValue) => defaultValue ?? 100, // Fixe 100px par défaut
-      height: (defaultValue) => defaultValue ?? 100,
-    },
+    domains: [process.env.APP_BASE_URL]
   },
 
   css: [
