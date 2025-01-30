@@ -53,11 +53,6 @@ export default defineNuxtConfig({
 
   image: {
     domains: [process.env.APP_BASE_URL],
-    provider: process.env.PRESET === "node-server" ? "ipx" : "aws-amplify",
-    modifiers: {
-      width: (defaultValue) => defaultValue ?? 100, // Fixe 100px par défaut
-      height: (defaultValue) => defaultValue ?? 100,
-    },
   },
 
   css: [
