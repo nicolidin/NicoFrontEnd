@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    preset: "aws-amplify",
+    preset: process.env.PRESET ?? "aws-amplify",
     awsAmplify: {
       catchAllStaticFallback: true, // Ensures SSG routes are properly handled
     },
@@ -52,7 +52,12 @@ export default defineNuxtConfig({
   },
 
   image: {
-    domains: [process.env.APP_BASE_URL]
+    domains: [process.env.APP_BASE_URL],
+    provider: process.env.PRESET === "node-server" ? "ipx" : "aws-amplify",
+    modifiers: {
+      width: (defaultValue) => defaultValue ?? 100, // Fixe 100px par défaut
+      height: (defaultValue) => defaultValue ?? 100,
+    },
   },
 
   css: [
