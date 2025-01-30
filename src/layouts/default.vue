@@ -10,6 +10,7 @@
       "
     >
       <v-container>
+        <h1> Work In Progress </h1>
         <v-tabs v-model="routeName">
           <v-tab value="Home" @click="nav('/')">Home</v-tab>
           <v-tab value="Articles" @click="nav('/articles')">Articles</v-tab>
