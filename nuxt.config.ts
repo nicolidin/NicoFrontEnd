@@ -53,6 +53,9 @@ export default defineNuxtConfig({
 
   image: {
     domains: [process.env.APP_BASE_URL],
+    small: 100,
+    medium: 100, // ❌ Avant, peut-être que ça valait 320px ?
+    large: 100, // ❌ Assure que `large` ne force pas `w=320`
   },
 
   css: [
