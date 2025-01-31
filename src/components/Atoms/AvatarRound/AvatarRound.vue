@@ -1,8 +1,8 @@
 <template>
   <nuxt-img alt="nicolas_pp" :src="props.imgPath"
             class="circle" height="100" width="100"
-            sizes="(min-width: 640px) 100px, 50vw"
-            :modifiers="{ width: 100, height: 100 }"></nuxt-img>
+            :sizes="false"
+            :modifiers="{ width: 100, height: 100, fit: 'cover' }"></nuxt-img>
 </template>
 
 <script setup lang="ts">
