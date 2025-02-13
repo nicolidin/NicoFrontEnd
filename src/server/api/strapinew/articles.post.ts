@@ -1,5 +1,5 @@
 export default defineEventHandler(async (event) => {
-  console.log("POSTTT")
+  console.log("POSTTT");
   const config = useRuntimeConfig();
   const strapiUrl = `${config.strapiBaseUrl}/articles`;
 
@@ -8,13 +8,13 @@ export default defineEventHandler(async (event) => {
   try {
     // Perform the manual fetch to Strapi
     const response = await fetch(strapiUrl, {
-      method: 'GET',
+      method: "GET",
       headers: {
         Authorization: `Bearer ${config.strapiBearerToken}`,
       },
     });
 
-    console.log("response post status: ", response.status)
+    console.log("response post status: ", response.status);
     // Set Strapi's status code and headers on the current response
     event.node.res.statusCode = response.status;
 
@@ -26,12 +26,11 @@ export default defineEventHandler(async (event) => {
     // Stream the response body directly
     const body = await response.text(); // Get the body as text
     return body; // This will be sent to the client
-
   } catch (error) {
     console.error("Error fetching from Strapi:", error);
     throw createError({
       statusCode: 500,
-      statusMessage: 'Failed to fetch data from Strapi',
+      statusMessage: "Failed to fetch data from Strapi",
     });
   }
 });

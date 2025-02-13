@@ -1,7 +1,7 @@
 // stores/useExampleStore.ts
-import { defineStore } from 'pinia';
+import { defineStore } from "pinia";
 
-export const useExampleStore = defineStore('example', {
+export const useExampleStore = defineStore("example", {
   state: () => ({ _count: 0 }),
   getters: {
     count(state) {
@@ -11,6 +11,6 @@ export const useExampleStore = defineStore('example', {
   actions: {
     increment() {
       this._count++;
-    }
-  }
+    },
+  },
 });

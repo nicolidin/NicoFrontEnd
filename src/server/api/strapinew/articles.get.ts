@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
     console.error("Error fetching from Strapi:", error);
     throw createError({
       statusCode: 500,
-      statusMessage: 'Failed to fetch data from Strapi',
+      statusMessage: "Failed to fetch data from Strapi",
     });
   }
 });

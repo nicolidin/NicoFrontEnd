@@ -1,15 +1,15 @@
 // stores/globalConfigStore.js
-import { defineStore } from 'pinia';
+import { defineStore } from "pinia";
 
-type ColorMode = 'dark' | 'light' | 'red';
-type Language = 'en' | 'fr';
+type ColorMode = "dark" | "light" | "red";
+type Language = "en" | "fr";
 
 // global config store, associated composables are made to manipulate it.
 export const globalConfigStore = defineStore({
-  id: 'globalConfig',
+  id: "globalConfig",
   state: () => {
     return {
-      colorMode: 'dark' as ColorMode,
+      colorMode: "dark" as ColorMode,
       // language: 'fr' as Language // source of truth
     };
   },
@@ -17,15 +17,15 @@ export const globalConfigStore = defineStore({
     enabled: true,
     persist: {
       storage: piniaPluginPersistedstate.cookies({
-        sameSite: 'lax',
+        sameSite: "lax",
         maxAge: 3600 * 24 * 7, // 1 semaine
       }),
     },
-    pick: ['someState'],
+    pick: ["someState"],
   },
   getters: {
     isDark() {
-      return this.colorMode === 'dark';
+      return this.colorMode === "dark";
     },
     color() {
       return this.colorMode;
@@ -33,7 +33,7 @@ export const globalConfigStore = defineStore({
   },
   actions: {
     toggleTheme() {
-      this.colorMode = this.colorMode === 'dark' ? 'light' : 'dark';
+      this.colorMode = this.colorMode === "dark" ? "light" : "dark";
     },
     // for future if new theme is added
     manuallySwitchThemeColor(mode: ColorMode) {

@@ -1,15 +1,15 @@
 <template>
-  <MarkdownText :content-md="props.contentMd"/>
+  <MarkdownText :content-md="props.contentMd" />
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import MarkdownIt from 'markdown-it';
+import { ref, computed } from "vue";
+import MarkdownIt from "markdown-it";
 import MarkdownText from "~/components/Molecules/MarkdownText/MarkdownText.vue";
 
 const props = defineProps<{
-  contentMd: string
-}>()
+  contentMd: string;
+}>();
 
 // Initialize Markdown-it directly in the component
 const md = new MarkdownIt();

@@ -1,11 +1,11 @@
 <!-- pages/en.vue -->
 <template>
-  <index/>
+  <index />
 </template>
 
 <script setup>
-import index from "~/pages/index.vue"
-import {useLanguage} from "~/myPlugins/globalConfigManager/composables/useLanguage.ts";
+import index from "~/pages/index.vue";
+import { useLanguage } from "~/myPlugins/globalConfigManager/composables/useLanguage.ts";
 
 // const { languageRef } = useLanguageToggle()
 // languageRef.value = "en"

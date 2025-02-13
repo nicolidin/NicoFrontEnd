@@ -1,9 +1,9 @@
 // server/utils/cache.ts
 
 export async function getCachedOrFetch<T>(
-  cacheKey: string,          // Clé unique pour identifier le cache
+  cacheKey: string, // Clé unique pour identifier le cache
   fetchFn: () => Promise<T>, // Fonction fetch pour obtenir les données
-  ttl: number = 3600         // Temps de vie du cache en secondes (1 heure par défaut)
+  ttl: number = 3600, // Temps de vie du cache en secondes (1 heure par défaut)
 ): Promise<T> {
   const storage = useStorage();
 
@@ -11,16 +11,16 @@ export async function getCachedOrFetch<T>(
   const cachedResponse = await storage.getItem<T>(cacheKey);
   if (cachedResponse) {
     console.log(`Cache hit for key: ${cacheKey}`);
-    console.log("cachedResponse: ", cachedResponse)
+    console.log("cachedResponse: ", cachedResponse);
     return cachedResponse;
   }
 
   console.log(`Cache miss for key: ${cacheKey}. Fetching data...`);
 
   const rawData = await fetchFn();
-  console.log("after rawData")
+  console.log("after rawData");
   // Tenter de convertir les données brutes en JSON
-// Extraire les données sérialisables
+  // Extraire les données sérialisables
   let serializableData;
   try {
     if (rawData?.json) {

@@ -1,4 +1,4 @@
-import type {ArticleType} from "~/types/ArticleType";
+import type { ArticleType } from "~/types/ArticleType";
 
 type StrapiArticleType = {
   id: number;
@@ -8,7 +8,6 @@ type StrapiArticleType = {
   updatedAt: string;
   publishedAt: string;
 };
-
 
 type StrapiResponseType = {
   data: StrapiArticleType[];
@@ -22,7 +21,9 @@ type StrapiResponseType = {
   };
 };
 
-export function normalizeArticles(strapiData: StrapiResponseType): ArticleType[] {
+export function normalizeArticles(
+  strapiData: StrapiResponseType,
+): ArticleType[] {
   return strapiData.data.map((article) => ({
     documentId: article.id,
     documentId: article.documentId,

@@ -1,15 +1,15 @@
 // plugins/vuetify.ts
-import { createVuetify } from 'vuetify';
-import * as components from 'vuetify/components';
-import * as directives from 'vuetify/directives';
-import {dark, light} from "~/utils/themes";
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+import { dark, light } from "~/utils/themes";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
     ssr: true,
     theme: {
-      defaultTheme: 'light',
-     themes: {
+      defaultTheme: "light",
+      themes: {
         light,
         dark,
       },
@@ -19,5 +19,5 @@ export default defineNuxtPlugin((nuxtApp) => {
   });
 
   nuxtApp.vueApp.use(vuetify);
-  nuxtApp.provide('vuetify', vuetify);
+  nuxtApp.provide("vuetify", vuetify);
 });

@@ -1,8 +1,8 @@
 // composables/useLanguageToggle.ts
-import { computed } from 'vue';
-import { storeToRefs } from 'pinia';
-import { globalConfigStore } from '~/myPlugins/globalConfigManager/store/globalConfigStore';
-import { useI18n } from 'vue-i18n';
+import { computed } from "vue";
+import { storeToRefs } from "pinia";
+import { globalConfigStore } from "~/myPlugins/globalConfigManager/store/globalConfigStore";
+import { useI18n } from "vue-i18n";
 
 export function useLanguage() {
   const { locale, setLocale } = useI18n();
@@ -10,16 +10,16 @@ export function useLanguage() {
   const languageRef = computed({
     get: () => locale.value,
     set: (value) => {
-      setLocale(value)
+      setLocale(value);
     },
   });
   //
   const isEnglishRef = computed({
-    get: () => locale.value === 'en',
+    get: () => locale.value === "en",
     set: (value) => {
-      setLocale( value ? 'en' : 'fr');
+      setLocale(value ? "en" : "fr");
     },
   });
 
-  return { languageRef , isEnglishRef };
+  return { languageRef, isEnglishRef };
 }

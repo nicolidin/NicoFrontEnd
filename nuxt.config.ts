@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import {fileURLToPath} from "node:url";
 
 export default defineNuxtConfig({
   srcDir: 'src/', // Tell Nuxt to use the `src` directory
@@ -13,8 +14,14 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image',
   ],
-
+  components: [
+    {
+      path: 'node_modules/lidin-app-kit/dist/components',
+      global: true
+    }
+  ],
   plugins: [
+    // '~/plugins/lidinAppKit.ts',
     '~/plugins/vuetify.ts',
     '~/myPlugins/globalConfigManager/nuxtGlobalConfigPlugin.ts',
     '~/plugins/initAppData.ts',
@@ -53,18 +60,20 @@ export default defineNuxtConfig({
 
   image: {
     domains: [process.env.APP_BASE_URL],
-    small: 100,
-    medium: 100, // ❌ Avant, peut-être que ça valait 320px ?
-    large: 100, // ❌ Assure que `large` ne force pas `w=320`
   },
 
   css: [
     // 'vuetify/styles',
     '@mdi/font/css/materialdesignicons.css', // Icônes Material Design
-    '@/assets/main.scss'
+    '@/assets/main.scss',
+    "lidin-app-kit/dist/style.css"
   ],
   build: {
-    transpile: ['vuetify'],
+    transpile: ['vuetify', 'lidin-app-kit'],
+    rollupOptions: {
+      // external: ["vue"] // Exclure Vue du bundle
+    }
+
   },
 
   runtimeConfig: {
@@ -80,6 +89,9 @@ export default defineNuxtConfig({
 
   // Based on docs found here - https://vuetifyjs.com/en/getting-started/installation/#using-nuxt-3
   vite: {
+    optimizeDeps: {
+      include: ['lidin-app-kit', 'vue-draggable']
+    },
     css: {
       preprocessorOptions: {
         scss: {

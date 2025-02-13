@@ -1,9 +1,10 @@
 <template>
   <div class="container">
-    <AvatarRound v-show="showPicture" :img-path="props.imgPath"/>
-    <h1>{{t('title1')}}</h1>
-    <h2>{{t('title2')}}</h2>
-    <h2>{{t('title3')}}</h2>
+    <AvatarRound v-show="showPicture" :img-path="props.imgPath" />
+    <h1>{{ t("workInProgress") }}</h1>
+    <h1>{{ t("title1") }}</h1>
+    <h2>{{ t("title2") }}</h2>
+    <h2>{{ t("title3") }}</h2>
   </div>
 </template>
 
@@ -13,17 +14,16 @@ import AvatarRound from "~/components/Atoms/AvatarRound/AvatarRound.vue";
 type Props = {
   imgPath: string;
   showPicture: boolean;
-}
+};
 
 const props = withDefaults(defineProps<Props>(), {
-  showPicture: true
-})
+  showPicture: true,
+});
 
 const { t, locale } = useI18n();
 </script>
 
 <style scoped lang="scss">
-
 .container {
   display: flex;
   flex-direction: column;

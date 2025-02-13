@@ -1,8 +1,9 @@
 {
+  "workInProgress": "Ce site est en cours de développement !",
   "welcome": "Bienvenue sur notre site!",
   "title1": "Développeur Web/Mobile/Logiciel",
   "title2": "⚡ Expert Vue.js",
-  "title3":  "👨‍🏫 Enseignant. Disponible.",
+  "title3": "👨‍🏫 Enseignant. Disponible.",
   "language": "Langue",
   "description1": "👨‍💻 Développeur Full-stack avec une forte expertise en front-end, je suis adepte et expert du framework Vue.js ainsi que de toutes les technologies de son écosystème.",
   "description2": "🛠 Architecte logiciel, ayant une prédilection pour collaborer avec des start-ups, je conçois des projets techniquement riches from-scratch. ",

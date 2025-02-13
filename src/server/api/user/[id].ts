@@ -1,4 +1,4 @@
-import { getQuery, readBody } from 'h3';
+import { getQuery, readBody } from "h3";
 
 export default defineEventHandler(async (event) => {
   const userId = event.context.params?.id; // Récupère l'ID de l'utilisateur depuis l'URL dynamique
@@ -6,11 +6,11 @@ export default defineEventHandler(async (event) => {
   if (!userId) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'User ID is required',
+      statusMessage: "User ID is required",
     });
   }
 
-  if (event.req.method === 'GET') {
+  if (event.req.method === "GET") {
     // Exemple : Récupérer des paramètres de requête
     const query = getQuery(event);
     return {
@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
     };
   }
 
-  if (event.req.method === 'POST') {
+  if (event.req.method === "POST") {
     // Exemple : Lire le corps d'une requête POST
     const body = await readBody(event);
     return {
@@ -30,6 +30,6 @@ export default defineEventHandler(async (event) => {
 
   throw createError({
     statusCode: 405,
-    statusMessage: 'Method Not Allowed',
+    statusMessage: "Method Not Allowed",
   });
 });

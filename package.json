@@ -14,17 +14,19 @@
     "start": "nuxi start",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
-    "postinstall": "nuxi prepare"
+    "postinstall": "nuxi prepare",
+    "format": "prettier -c \"./src/**/*.{js,ts,tsx,scss,css,json,vue}\"",
+    "format:fix": "yarn format --write"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/i18n": "^8.5.5",
     "@pinia/nuxt": "^0.5.5",
-    "@types/lodash": "^4.17.13",
     "@vuepic/vue-datepicker": "^9.0.3",
     "deepmerge": "^4.3.1",
-    "lodash": "^4.17.21",
+    "lidin-app-kit": "^1.0.1-beta.2",
+    "lodash-es": "^4.17.21",
     "markdown-it": "^14.1.0",
     "muuri": "^0.9.5",
     "nuxt": "^3.13.2",
@@ -37,7 +39,6 @@
     "string-width": "^7.2.0",
     "uuid": "^11.0.2",
     "vite-plugin-vuetify": "^2.0.4",
-    "vue": "latest",
     "vue-router": "latest",
     "vuedraggable": "^4.1.0",
     "vuetify": "^3.7.3",
@@ -48,6 +49,8 @@
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "devDependencies": {
-    "@sidebase/nuxt-auth": "^0.9.4"
+    "@sidebase/nuxt-auth": "^0.9.4",
+    "@types/lodash-es": "^4.17.12",
+    "prettier": "^3.5.1"
   }
 }
