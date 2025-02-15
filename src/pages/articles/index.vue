@@ -38,8 +38,18 @@ useSeoMeta({
 </script>
 
 <style scoped lang="scss">
+@use "vuetify/lib/styles/settings/variables" as *;
 .articlePage {
   height: 100%;
   width: 100%;
+}
+
+//::v-deep(.markdown p) {
+//  color: var(--v-theme-kground);
+//}
+</style>
+<style lang="scss">
+.articlePage * {
+  color: rgb(var(--v-theme-on-background));
 }
 </style>

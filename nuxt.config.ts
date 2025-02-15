@@ -96,8 +96,9 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-         @use "@/assets/_spacing.scss" as *;
-         @use "@/assets/_breakpoint.scss" as *;
+           @use "lidin-app-kit/src/styles/lidin-app-kit.scss" as *;
+           // @use "vuetify/styles" as *;
+           // @use "@/assets/mains.scss" as *;
          `
         }
       }
