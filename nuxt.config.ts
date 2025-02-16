@@ -21,9 +21,7 @@ export default defineNuxtConfig({
     }
   ],
   plugins: [
-    // '~/plugins/lidinAppKit.ts',
     '~/plugins/vuetify.ts',
-    '~/myPlugins/globalConfigManager/nuxtGlobalConfigPlugin.ts',
     '~/plugins/initAppData.ts',
   ],
 

@@ -3866,7 +3866,7 @@ lazystream@^1.0.0:
   dependencies:
     readable-stream "^2.0.5"
 
-"lidin-app-kit@file:../../lidin-app-kit":
+lidin-app-kit@/home/nicolas/Projects/lidin-app-kit:
   version "1.0.1-beta.3"
 
 lilconfig@^3.1.2:

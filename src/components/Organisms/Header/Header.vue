@@ -24,8 +24,7 @@
 </template>
 
 <script setup>
-import { useTheme } from "~/myPlugins/globalConfigManager/composables/useTheme.ts";
-import { useLanguage } from "~/myPlugins/globalConfigManager/composables/useLanguage.ts";
+import { useLanguage, useTheme } from "lidin-app-kit";
 
 const fab = ref(null);
 

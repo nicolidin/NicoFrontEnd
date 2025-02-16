@@ -26,10 +26,9 @@
 </template>
 
 <script setup>
-import { useTheme } from "~/myPlugins/globalConfigManager/composables/useTheme.ts";
 import Header from "~/components/Organisms/Header/Header.vue";
 import DescriptionDataContent from "@/components/Molecules/DescriptionDataContent.vue";
-import { useLanguage } from "~/myPlugins/globalConfigManager/composables/useLanguage.ts";
+import { useLanguage } from "lidin-app-kit";
 function isEnglishUrl(url) {
   // Check if the URL contains '/en/' or ends with '/en' but not '/eng'
   return /\/en(\/|$)(?![a-zA-Z0-9])/.test(url);
