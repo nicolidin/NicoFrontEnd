@@ -3866,8 +3866,10 @@ lazystream@^1.0.0:
   dependencies:
     readable-stream "^2.0.5"
 
-lidin-app-kit@/home/nicolas/Projects/lidin-app-kit:
-  version "1.0.1-beta.3"
+lidin-app-kit@^1.0.1-beta.4:
+  version "1.0.1-beta.4"
+  resolved "https://registry.yarnpkg.com/lidin-app-kit/-/lidin-app-kit-1.0.1-beta.4.tgz#25f25eb26ddaa23aeaef3ed261ad96323196d375"
+  integrity sha512-/g0trQZ/eiVO1o1x/N//0yCl2LuH7FJq5oGBAEb+OnLed5EacpJgJ9Ux09NmZnS6bQPObFGLNLgHYOVRKSb9cg==
 
 lilconfig@^3.1.2:
   version "3.1.3"
