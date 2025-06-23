@@ -13,7 +13,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
       key: "articles", // Clé pour réutiliser les mêmes données pour chaque utilisateur
       cache: true, // Active le cache pour cette requête
       maxAge: 60 * 60, // Durée de vie du cache (en secondes), ici 1 heure
-      staleWhileRevalidate: true, // Utilise les don
+      staleWhileRevalidate: false, //vefif le comportement côté client & server
     });
     if (data.value) {
       articlesStore.setArticles(normalizeArticles(data.value));

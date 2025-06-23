@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import {fileURLToPath} from "node:url";
+import path from 'path'
 
 export default defineNuxtConfig({
   srcDir: 'src/', // Tell Nuxt to use the `src` directory
@@ -64,7 +65,7 @@ export default defineNuxtConfig({
     // 'vuetify/styles',
     '@mdi/font/css/materialdesignicons.css', // Icônes Material Design
     '@/assets/main.scss',
-    "lidin-app-kit/dist/style.css"
+    "lidin-app-kit/style.css"
   ],
   build: {
     transpile: ['vuetify', 'lidin-app-kit'],
@@ -90,13 +91,23 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: ['lidin-app-kit', 'vue-draggable']
     },
+    resolve: {
+      alias: [
+        ...(process.env.NODE_ENV !== "production"
+            ? [
+              {
+                find: 'lidin-app-kit',
+                replacement: path.resolve(__dirname, '../../lidin-app-kit/src')
+              }
+            ]
+            : []
+        )]
+    },
     css: {
       preprocessorOptions: {
         scss: {
           additionalData: `
-           @use "lidin-app-kit/src/styles/lidin-app-kit.scss" as *;
-           // @use "vuetify/styles" as *;
-           // @use "@/assets/mains.scss" as *;
+           @use "lidin-app-kit/styles/lidin-app-kit.scss" as *;
          `
         }
       }

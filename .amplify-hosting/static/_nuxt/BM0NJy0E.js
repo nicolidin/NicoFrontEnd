@@ -1,0 +1,1 @@
+import{ca as n,cb as i,m as t}from"./CZEwGKft.js";function l(e){return{}}const s=n(e=>{var r;console.log("middleware called !");const a=i("i18n_redirected").value||"fr";(r=l()["accept-language"])!=null&&r.split(",")[0].slice(0,2);const o=a;if(console.log("preferredLang: ",o),e.path==="/"&&o==="en")return console.log("if if do we navigate?"),t("/en")});export{s as default};

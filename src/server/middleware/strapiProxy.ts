@@ -35,32 +35,14 @@ export default defineEventHandler(async (event) => {
       return response;
     } catch (error) {
       console.error("Error proxying request to Strapi:", error);
-      throw createError({
-        statusCode: error.response?.status || 500,
-        statusMessage: error.message || "Failed to proxy request to Strapi",
-      });
+
+      // Retourner une réponse d'erreur au lieu de throw
+      event.node.res.statusCode = 500;
+      return {
+        error: "Failed to fetch from Strapi",
+        data: [],
+        meta: { pagination: { total: 0 } }
+      };
     }
   }
 });
-
-// server/middleware/strapiProxy.ts
-//
-// export default defineEventHandler(async (event) => {
-//
-//   // Check if the request starts with `/strapi/api`
-//   if (event.node.req.url?.startsWith('/strapi/api')) {
-//     const config = useRuntimeConfig()
-//     // Remove the `/strapi/api` prefix and forward the remaining path to Strapi
-//     const strapiArticlesPath = event.node.req.url.replace(/^\/strapi\/api/, '')
-//     const strapiArticlesFullUrl = `${config.strapiBaseUrl}${strapiArticlesPath}`
-//
-//     console.log("Proxying request to Strapi at path:", strapiArticlesFullUrl)
-//
-//     // Proxy the request to Strapi with the Bearer token
-//     return proxyRequest(event, strapiArticlesFullUrl , {
-//       headers: {
-//         Authorization: `Bearer ${config.strapiBearerToken}`,
-//       },
-//     })
-//   }
-// })

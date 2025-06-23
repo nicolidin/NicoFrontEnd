@@ -9,6 +9,7 @@
 import { useArticlesStore } from "#imports";
 import { ArticleMarkdownReadonly } from "lidin-app-kit";
 import { fetchArticleBySlug } from "~/api/strapi/fetchArticles";
+import ArticleMardownReadonly from "~/components/Molecules/ArticleMardownReadonly/ArticleMardownReadonly.vue";
 
 const route = useRoute();
 const slug = route.params.slug;
@@ -32,7 +33,7 @@ const { data } = await useAsyncData(`article`, () => fetchArticleBySlug(slug), {
   key: "articles", // Clé pour réutiliser les mêmes données pour chaque utilisateur
   cache: true, // Active le cache pour cette requête
   maxAge: 60 * 60, // Durée de vie du cache (en secondes), ici 1 heure
-  staleWhileRevalidate: true, // Utilise les don
+  staleWhileRevalidate: false, // Utilise les don
   // cache: true,
   // maxAge: 60 * 60,
   // staleWhileRevalidate: true,

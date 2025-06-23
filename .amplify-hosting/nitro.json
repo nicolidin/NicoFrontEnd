@@ -1,0 +1,19 @@
+{
+  "date": "2025-01-31T13:22:19.867Z",
+  "preset": "aws-amplify",
+  "framework": {
+    "name": "nuxt",
+    "version": "3.15.3"
+  },
+  "versions": {
+    "nitro": "2.10.4"
+  },
+  "commands": {
+    "preview": "node ./compute/default/server.js"
+  },
+  "config": {
+    "awsAmplify": {
+      "catchAllStaticFallback": true
+    }
+  }
+}
