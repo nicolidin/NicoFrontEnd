@@ -23,7 +23,6 @@
     }
   ],
   "build": {
-    "command": "yarn build",
-    "output_dir": ".output"
+    "command": "yarn build"
   }
-} 
+}
