@@ -12,16 +12,6 @@
   "vars": {
     "STRAPI_MOCK" : "true"
   },
-  "routes": [
-    {
-      "pattern": "/_nuxt/*",
-      "serve": "/_nuxt/*"
-    },
-    {
-      "pattern": "/*",
-      "script_name": "index"
-    }
-  ],
   "build": {
     "command": "yarn build"
   }
