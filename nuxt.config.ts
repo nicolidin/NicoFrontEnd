@@ -27,9 +27,9 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    preset: process.env.PRESET ?? "aws-amplify",
-    awsAmplify: {
-      catchAllStaticFallback: true, // Ensures SSG routes are properly handled
+    preset: process.env.PRESET ?? "cloudflare-pages",
+    cloudflarePages: {
+      // Configuration spécifique à Cloudflare Pages
     },
     debug: true, // Affiche des logs détaillés dans la console
     storage: {

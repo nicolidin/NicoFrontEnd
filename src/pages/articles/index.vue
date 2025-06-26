@@ -26,6 +26,8 @@ const openArticle = (article: ArticleType) => {
   router.push(localePath(`/article/${article.slug}`));
 };
 
+// definePageMeta({middleware: 'my-route-middleware'})
+
 useSeoMeta({
   title: t("SEO.articles.title"),
   description: t("SEO.articles.description"),
@@ -35,6 +37,7 @@ useSeoMeta({
   ogImageUrl: `${config.public.appBaseUrl}/images/articles_collection.jpg`,
   ogImageAlt: t("SEO.articles.ogImageAlt"),
 });
+
 </script>
 
 <style scoped lang="scss">

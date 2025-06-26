@@ -1,0 +1,29 @@
+{
+  "name": "nico-frontend",
+  "compatibility_date": "2024-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "./.output/server/index.mjs",
+  "site": {
+    "bucket": "./.output/public"
+  },
+  "env": {
+    "STRAPI_MOCK" : "true"
+  },
+  "vars": {
+    "STRAPI_MOCK" : "true"
+  },
+  "routes": [
+    {
+      "pattern": "/_nuxt/*",
+      "serve": "/_nuxt/*"
+    },
+    {
+      "pattern": "/*",
+      "script_name": "index"
+    }
+  ],
+  "build": {
+    "command": "yarn build",
+    "output_dir": ".output"
+  }
+} 
