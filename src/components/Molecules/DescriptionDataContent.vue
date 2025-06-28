@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <p class="test">test</p>
     <AvatarRound v-show="showPicture" :img-path="props.imgPath" />
     <h1>{{ t("workInProgress") }}</h1>
     <h1>{{ t("title1") }}</h1>
